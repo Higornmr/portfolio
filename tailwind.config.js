@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,vue}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        'max-w': '1200px',
+      },
+      colors: {
+        'bg-inicial': '#FFF7AD',
+        'bg-final': '#FFA9F8',
+      },
+    },
   },
   plugins: [],
 }
