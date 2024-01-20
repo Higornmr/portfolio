@@ -1,12 +1,12 @@
 <template>
-    <div class="flex flex-col justify-between bg-black w-full min-h-screen overflow-x-hidden" >
-        <header>
+    <div class="flex flex-col justify-between items-center w-full min-h-screen overflow-x-hidden bg-gradient-to-r from-bg-inicial to-bg-final h-screen">
+        <header class="w-full">
             <Header />
         </header>
-        <main class="flex flex-col flex-1 mt-[60px]">
+        <main class="flex flex-col flex-1 mt-[60px] w-full max-w-max-w">
             <slot />
         </main>
-        <footer>
+        <footer class="w-full">
             <Footer />
         </footer>
     </div>
