@@ -3,7 +3,7 @@
         <header class="w-full">
             <Header />
         </header>
-        <main class="flex flex-col flex-1 mt-[60px] w-full max-w-max-w">
+        <main class="flex flex-col flex-1 mt-[20px] w-full max-w-max-w">
             <slot />
         </main>
         <footer class="w-full">

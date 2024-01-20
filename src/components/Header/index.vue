@@ -1,16 +1,11 @@
 <template>
-    <div class="flex justify-center w-full px-3 h-[60px] fixed top-0 z-50 bg-blue-900">
-        <nav class="relative flex items-center justify-center w-full max-w-max-w">
-            
-            <!-- LOGO -->
-            <!-- <div class="absolute left-0 text-white">
-                <h2 class="text-xl mb-0 font-title">LOGO</h2>
-            </div> -->
+    <div class="flex justify-center w-full px-3 h-[60px] top-0 z-50">
+        <nav class="flex items-center justify-center w-full max-w-max-w">
 
             <!-- MENU DESKTOP -->
             <ul class="items-center gap-11 hidden lg:flex">
                 <li class="relative" v-for="item in state.menuItems" :key="item.value">
-                    <a :href="item.link" class="menu__link text-white">{{
+                    <a :href="item.link" class="menu__link text-4xl">{{
                         item.label
                     }}</a>
                 </li>
@@ -28,20 +23,17 @@
 
                 <!-- LINKS MOBILE -->
                 <div id="header-links-mobile"
-                    class="absolute z-50 bg-blue-500 w-60 right-0 top-10 p-5 text-right h-screen transition-all duration-200 ease-in-out"
+                    class="absolute z-50 w-28 right-0 top-10 p-5 text-right h-fit transition-all duration-200 ease-in-out border-2  rounded-l-md bg-gradient-to-r from-bg-final to-bg-inicial"
                     :class="state.menuMobileIsOpen ? 'linksMobileVisible' : 'linksMobileHidden'">
-                    <ul class="flex-col items-center gap-11">
+                    <ul class="flex-col items-center text-center gap-11">
                         <li class="relative" v-for="item in state.menuItems" :key="item.value">
-                            <a :href="item.link" class="menu__link text-white">{{
+                            <a :href="item.link" class="menu__link text-xl">{{
                                 item.label
                             }}</a>
                         </li>
                     </ul>
                 </div>
             </div>
-
-            <!-- TERCEIRO ELEMENTO -->
-            <!-- <div class="absolute right-1/2 lg:right-0 transform translate-x-1/2 lg:translate-x-0 w-24 h-7 border border-white "></div> -->
         </nav>
     </div>
 </template>
@@ -113,12 +105,12 @@ export default {
 .menu__link {
     display: block;
     padding: 8px 0px;
-    position: relative;
+    position: block;
 }
 
 .menu__link:after {
     content: "";
-    position: absolute;
+    position: block;
     top: 0;
     left: 0;
     border: 1px solid transparent;
@@ -158,12 +150,10 @@ export default {
 }
 
 .linksMobileHidden {
-    transform: translateX(200px);
     opacity: 0;
 }
 
 .linksMobileVisible {
-    transform: translateX(16px);
     opacity: 1;
 }
 </style>

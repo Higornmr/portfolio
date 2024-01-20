@@ -13,6 +13,9 @@ export default {
         'bg-inicial': '#FFF7AD',
         'bg-final': '#FFA9F8',
       },
+      fontFamily: {
+        'lato': ['"Lato"'],
+      },
     },
   },
   plugins: [],
