@@ -1,11 +1,11 @@
 <template>
     <div class="flex justify-center w-full px-3 h-[60px] fixed top-0 z-50 bg-blue-900">
-        <nav class="relative flex items-center justify-center w-full max-w-7xl">
+        <nav class="relative flex items-center justify-center w-full max-w-max-w">
             
             <!-- LOGO -->
-            <div class="absolute left-0 text-white">
+            <!-- <div class="absolute left-0 text-white">
                 <h2 class="text-xl mb-0 font-title">LOGO</h2>
-            </div>
+            </div> -->
 
             <!-- MENU DESKTOP -->
             <ul class="items-center gap-11 hidden lg:flex">
@@ -41,7 +41,7 @@
             </div>
 
             <!-- TERCEIRO ELEMENTO -->
-            <div class="absolute right-1/2 lg:right-0 transform translate-x-1/2 lg:translate-x-0 w-24 h-7 border border-white "></div>
+            <!-- <div class="absolute right-1/2 lg:right-0 transform translate-x-1/2 lg:translate-x-0 w-24 h-7 border border-white "></div> -->
         </nav>
     </div>
 </template>

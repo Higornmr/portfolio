@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center justify-center px-4 py-2 w-full bg-blue-900">
-        <h2 class="text-white">FOOTER</h2>
+        <h2 class="text-white">© Desenvolvido por Higor Rodrigues</h2>
     </div>
 </template>
 
