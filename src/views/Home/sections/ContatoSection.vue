@@ -31,7 +31,7 @@
             </form>
         </div>
         <div class="whatsapp-btn-container flex flex-col gap-3 items-center">
-            <h2 class="font-bold font-lato text-2xl">Ou tire suas dúvidas através do WhatsApp:</h2>
+            <h2 class="font-bold font-lato text-2xl text-center">Ou tire suas dúvidas através do WhatsApp:</h2>
             <a class="whatsapp-btn flex items-center gap-4 p-4 bg-green-500 text-white rounded-md cursor-pointer" target="_blank" href="https://api.whatsapp.com/send?phone=01517997017533&text=Olá, gostaria de entrar em contato."
             >
                 <img class="w-6 h-6" :src="icon[0].img" :alt="icon[0].alt">
