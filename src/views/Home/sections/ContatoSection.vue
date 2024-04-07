@@ -1,27 +1,27 @@
 <template>
-    <div id="contato" class="contact-section flex flex-col justify-center items-center gap-20 p-20 w-full">
+    <div id="contato" class="contact-section flex flex-col justify-center items-center gap-20 py-20 px-2 w-full">
         <h2 class="font-bold font-lato text-2xl">Entre em Contato</h2>
         <div class="form-container w-full">
             <form class="flex flex-wrap justify-center items-center gap-8 w-full" action="https://formsubmit.co/bd45f493d685ad7920b7a28c68a03c41" method="POST">
                 <div class="flex flex-wrap justify-center items-center w-full gap-3">
-                    <div class="w-1/2 max-w-[400px]">
+                    <div class="sm:w-1/2 sm:max-w-[400px] w-full">
                         <label class="font-bold" for="name">Nome:</label>
                         <input class="w-full p-4 border border-gray-300 rounded-md" type="text" id="name" name="name" placeholder="Seu Nome">
                     </div>
 
-                    <div class="w-1/2 max-w-[400px]">
+                    <div class="sm:w-1/2 sm:max-w-[400px] w-full">
                         <label class="font-bold" for="email">E-mail:</label>
                         <input class="w-full p-4 border border-gray-300 rounded-md" type="email" id="email" name="email" placeholder="Seu E-mail">
                     </div>
                 </div>
 
                 <div class="flex flex-wrap justify-center items-start w-full gap-3">
-                    <div class="w-1/2 max-w-[400px]">
+                    <div class="sm:w-1/2 sm:max-w-[400px] w-full">
                         <label class="font-bold" for="phone">Telefone:</label>
                         <input class="w-full p-4 border border-gray-300 rounded-md" type="tel" id="phone" name="phone" placeholder="Seu Telefone">
                     </div>
 
-                    <div class="w-1/2 max-w-[400px]">
+                    <div class="sm:w-1/2 sm:max-w-[400px] w-full">
                         <label class="font-bold" for="message">Mensagem:</label>
                         <textarea class="w-full h-[60px] p-4 border border-gray-300 rounded-md" id="message" name="message" placeholder="Sua Mensagem"></textarea>
                     </div>

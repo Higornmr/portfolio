@@ -22,7 +22,7 @@
       <SobreSection />
     </div>
 
-    <div>
+    <div class="flex items-center justify-center w-full">
         <ContatoSection/>
     </div>
     
