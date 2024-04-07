@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center py-4">
+  <div id="importancia" class="w-full flex justify-center py-9">
     <div class="w-full">
       
       <div class="flex flex-col text-center justify-center item-center gap-2">
@@ -11,11 +11,16 @@
         </h2>
       </div>
 
-      <div class="flex flex-wrap w-full gap-7 justify-center py-4">
+      <div class="flex flex-wrap w-full gap-7 justify-center py-4" >
         <div
-        class="gap-2 max-w-[270px] flex flex-col justify-start items-center border-4 px-2 rounded-lg"
-        v-for="(topic, index) in topics" :key="index">
-          <div class="min-h-[106px] text-center flex items-center">
+        class="gap-2 group max-w-[270px] flex flex-col justify-start items-center border-4 px-2 rounded-lg"
+        v-for="(topic, index) in topics" :key="index"
+        v-motion
+        :initial="{ opacity: 0, x: 100 }" 
+        :visibleOnce="{ opacity: 1, x: 0, scale: 1 }" 
+        :delay="40 * (index + 1)"
+        >
+          <div class="min-h-[106px] text-center flex items-center group-hover:scale-105 transition-scale">
             <h2 class="text-2xl pt-2 font-lato font-bold">{{ topic.title }}</h2>
           </div>
           <ul class=" max-w-[250px]">

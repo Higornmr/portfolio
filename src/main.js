@@ -13,3 +13,4 @@ app.use(router)
 app.use(createPinia())
 app.use(MotionPlugin)
 app.mount('#app')
+

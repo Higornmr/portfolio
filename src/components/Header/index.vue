@@ -5,14 +5,14 @@
             <!-- MENU DESKTOP -->
             <ul class="items-center gap-11 hidden lg:flex">
                 <li class="relative" v-for="item in state.menuItems" :key="item.value">
-                    <a :href="item.link" class="menu__link text-4xl">{{
-                        item.label
-                    }}</a>
+                    <a :href="item.link" class="menu__link text-4xl">
+                        {{ item.label }}
+                    </a>
                 </li>
             </ul>
 
             <!-- MENU MOBILE -->
-            <div class="absolute right-0 lg:hidden">
+            <div class="absolute right-[20px] lg:hidden">
                 <!-- HAMBURGER -->
                 <div class="menu__hamburger space-y-2 cursor-pointer"
                     :class="state.menuMobileIsOpen ? 'hamburgerIsActive' : ''" @click.stop="toogleMenu">
@@ -40,25 +40,26 @@
   
 <script>
 import { onBeforeUnmount, onMounted, reactive } from 'vue';
+
 export default {
     name: 'Header',
     setup() {
         const state = reactive({
             menuItems: [
                 {
-                    label: "Home",
-                    value: "home",
-                    link: "#",
+                    label: "Início",
+                    value: "inicio",
+                    link: "#inicio",
                 },
                 {
-                    label: "Sobre",
-                    value: "sobre",
-                    link: "#",
+                    label: "A Importância",
+                    value: "importancia",
+                    link: "#importancia",
                 },
                 {
                     label: "Contato",
                     value: "contato",
-                    link: "#",
+                    link: "#contato",
                 },
             ],
             menuMobileIsOpen: false,
@@ -66,6 +67,22 @@ export default {
 
         onMounted(() => {
             window.addEventListener("click", clickOutside);
+
+            const links = document.querySelectorAll('.menu__link');
+
+            links.forEach(link => {
+              link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const href = this.getAttribute('href');
+
+                if (href.startsWith('#')) {
+                  const section = document.querySelector(href);
+                  
+                  section.scrollIntoView({ behavior: 'smooth' });
+                }
+              });
+            });
         })
 
         onBeforeUnmount(() => {
